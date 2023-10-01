@@ -4,7 +4,7 @@
     padding-left: 215px;
   }
   
-  .footer__container {
+  &__container {
     display: flex;
   }
   .footer-first {
@@ -16,11 +16,11 @@
     display: block;
     margin-bottom: 20px;
   }
-  .logo-link__logo {
+  &__logo {
     color: #ffffff;
   }
 
-  .logo-link__logo {
+  &__logo {
     font-family: "Raleway";
     font-weight: 700;
     font-size: 26px;
@@ -44,7 +44,7 @@
     }
   }
 
-  .logo-link__logo {
+  &__logo {
     color: #2196f3;
     animation: changing-color 2s linear infinite;
   }
@@ -100,7 +100,7 @@
     margin-right: 93px;
   }
   
-  .footer-second__text {
+  &__text {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -115,7 +115,7 @@
     width: 206px;
   }
   
-  .join-list__item {
+  &__item {
     width: 44px;
     height: 44px;
     display: flex;
@@ -126,12 +126,12 @@
     transition: transform 500ms ease;
   }
   
-  .join-list__item:hover {
+  &__item:hover {
     background-color: #2196f3;
     transform: scale(1.1);
   }
   
-  .join-list__social {
+  &__social {
     width: 20px;
     height: 20px;
     fill: #ffffff;
@@ -142,7 +142,7 @@
     width: 570px;
   }
   
-  .footer-form__label {
+  &__label {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -156,7 +156,7 @@
     align-items: flex-end;
   }
   
-  .footer-form__input {
+  &__input {
     width: 358px;
     height: 50px;
     border-radius: 4px;
@@ -167,11 +167,11 @@
     margin-top: 20px;
   }
   
-  .footer-form__input:hover {
+  &__input:hover {
     border: 1px solid #2196f3;
   }
   
-  .footer-form__btn {
+  &__btn {
     width: 200px;
     height: 50px;
     border-radius: 4px;
@@ -189,7 +189,7 @@
     justify-content: center;
     padding: 10px 28px;
   }
-  .footer-form__subscribe {
+  &__subscribe {
     fill: #ffffff;
     width: 24px;
     height: 24px;
