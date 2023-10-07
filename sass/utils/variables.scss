@@ -1,19 +1,19 @@
-$colorHover: #2196F3;
-$colorHeader: #212121;
-$secondColor: #B4AD9E;
-$primaryColor: #03A9F4;
-$colorFooter:#2F303A;
-$colorCustomers:#AFB1B8;
+$primary-font: #{'Roboto', sans-serif};
+$logo-font: #{'Raleway', sans-serif};
 
 $colors:(
-    'hover': #2196F3,
-    'header':#212121,
-    'second':#B4AD9E,
-    'primary':#03A9F4,
-    'footer':#2F303A,
-    'customers':#AFB1B8,
+    'hover-text':#2196F3,
+    'logo-link-text':#000,
+    'title-text':#212121,
+    'just-text':#757575,
+    'white-text':#fff,
+    'svg-text':#AFB1B8,
+    'overlay-text':rgba(47, 48, 58, 0.40),
+    'work-bg-text':rgba(47, 48, 58, 0.80),
+    'footer-bg-text':#2F303A,
+    'footer-btn-text':rgba(255, 255, 255, 0.10),
 );
 
-@function getcolor ($key) {
-    @return map-get($colors, $key),
-};
+@function get-color($key) {
+    @return map-get($colors, $key);
+}
