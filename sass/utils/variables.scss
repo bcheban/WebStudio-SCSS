@@ -3,17 +3,16 @@ $logo-font: #{'Raleway', sans-serif};
 
 $colors:(
     'hover-text':#2196F3,
-    'logo-link-text':#000,
     'title-text':#212121,
     'just-text':#757575,
     'white-text':#fff,
     'svg-text':#AFB1B8,
-    'overlay-text':rgba(47, 48, 58, 0.40),
-    'work-bg-text':rgba(47, 48, 58, 0.80),
+    'overlay-text':rgba(47, 48, 58, 0.4),
+    'work-bg-text':rgba(47, 48, 58, 0.8),
     'footer-bg-text':#2F303A,
-    'footer-btn-text':rgba(255, 255, 255, 0.10),
+    'footer-btn-text':rgba(255, 255, 255, 0.1),
 );
 
-@function get-color($key) {
+@function getcolor($key) {
     @return map-get($colors, $key);
 }
