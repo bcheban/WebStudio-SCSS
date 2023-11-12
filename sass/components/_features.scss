@@ -7,13 +7,13 @@
   }
 
   .features-list {
+    
+    @include flex($align-items: flex-start);
+    margin: 0 auto;
     @media screen and (max-width:1199px) {
       @include flex($wrap:wrap);
       gap: 30px;
   }
-    @include flex($align-items: flex-start);
-    width: 1200px;
-    margin: 0 auto;
     &__item {
       @media screen and (max-width:1199px) {
         width: calc((100% - 30px) / 2);

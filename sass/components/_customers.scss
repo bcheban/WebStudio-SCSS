@@ -1,24 +1,12 @@
-.clients .inner-container {
-  @media screen  and (max-width:1199px){
-    max-width: 768px;
-}
-@media screen  and (max-width:767px){
-    max-width: 480px;
-}
-@media screen  and (max-width:480px){
-    min-width: 320px;
-    @media screen and (max-width:768px) {
-      padding: 60px 0;
-  }
-}
-}
+
 
 .customers {
     padding: 94px 0;
-    &__title {
-      @media screen and (max-width:768px) {
-        margin-bottom: 30px;
+    @media screen and (max-width:768px) {
+      padding: 60px 0;
     }
+    &__title {
+      
       font-weight: 700;
       font-size: 36px;
       line-height: 1.16;
@@ -26,6 +14,11 @@
       letter-spacing: 0.03em;
       color: getcolor('title-text');
       margin-bottom: 50px;
+      @media screen and (max-width:768px) {
+        margin-bottom: 30px;
+        font-size: 28px;
+        letter-spacing: 0.84px;
+    }
     }
   }
 
@@ -33,6 +26,10 @@
     @include flex();
     width: 1170px;
     margin: 0 auto;
+    @media screen and (max-width:1199px) {
+      @include flex($wrap: wrap);
+      gap: 30px;
+    }
     &__item {
       @include flex(center);
       width: 170px;

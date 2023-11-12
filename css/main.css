@@ -327,7 +327,6 @@ a {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 1200px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1199px) {
@@ -620,29 +619,13 @@ a {
   height: 20px;
 }
 
-@media screen and (max-width: 1199px) {
-  .clients .inner-container {
-    max-width: 768px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .clients .inner-container {
-    max-width: 480px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .clients .inner-container {
-    min-width: 320px;
-  }
-}
-@media screen and (max-width: 480px) and (max-width: 768px) {
-  .clients .inner-container {
-    padding: 60px 0;
-  }
-}
-
 .customers {
   padding: 94px 0;
+}
+@media screen and (max-width: 768px) {
+  .customers {
+    padding: 60px 0;
+  }
 }
 .customers__title {
   font-weight: 700;
@@ -656,6 +639,8 @@ a {
 @media screen and (max-width: 768px) {
   .customers__title {
     margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 0.84px;
   }
 }
 
@@ -667,6 +652,16 @@ a {
   flex-wrap: nowrap;
   width: 1170px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1199px) {
+  .customers-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .customers-list__item {
   display: flex;
