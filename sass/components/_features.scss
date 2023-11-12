@@ -1,12 +1,26 @@
+
 .features {
     padding: 94px 0;
+    @media screen and (max-width:768px) {
+      padding: 60px 0;
+  }
   }
 
   .features-list {
-    @include flex();
+    @media screen and (max-width:1199px) {
+      @include flex($wrap:wrap);
+      gap: 30px;
+  }
+    @include flex($align-items: flex-start);
     width: 1200px;
     margin: 0 auto;
     &__item {
+      @media screen and (max-width:1199px) {
+        width: calc((100% - 30px) / 2);
+    }
+      @media screen and (max-width:767px) {
+        width: 100%;
+    }
       width: 270px;
       transition: transform 500ms ease;
       &::before {
@@ -37,6 +51,9 @@
       }
     }
     &__subtitle {
+      @media screen and (max-width: 480px) {
+        text-align: center;
+    }
       font-weight: 700;
       font-size: 14px;
       line-height: 1.14;

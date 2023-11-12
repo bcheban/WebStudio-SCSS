@@ -1,9 +1,29 @@
+.header .inner-container{
+  @include flex();
+}
+
+
+
 .header {
     @include flex();
     width: 1200px;
     margin: 0 auto;
     padding: 32px 0;
+  @media screen and (max-width:1199px){
+      padding: 21px 0;
+  }
+  @media screen and (max-width:767px){
+      padding: 10px 0;
+  }
     &__right {
+      @media screen and (max-width: 1199px) {
+        @include flex($align-items:flex-start,$flex-dir:column);
+        gap:10px;
+        max-width: 138px;
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
       @include flex();
       width: 333px;
     }
@@ -17,6 +37,10 @@
   }
   
   .logo-link-header {
+    @media screen and (min-width:768px){
+      font-size: 24px;
+      letter-spacing: 0.72px;
+  }
     font-family: "Raleway";
     font-weight: 700;
     font-size: 26px;
@@ -24,6 +48,7 @@
     color: getcolor('title-text');
     letter-spacing: 0.03em;
     animation: change-color 2s linear infinite;
+    
     &__web {
       color: #2196f3;
       animation: changecolor 2s linear infinite;
@@ -68,6 +93,9 @@
 
 
   .nav-list {
+    @media screen and (max-width:767px){
+      display: none;
+  }
     @include flex();
     width: 281px;
     font-weight: 500;
@@ -75,6 +103,9 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     &__link {
+      @media screen and (max-width: 768px) {
+        
+      } 
       color: getcolor('title-text');
       position: relative;
       &::after {
@@ -102,10 +133,14 @@
   
 
   .contacts-link {
+    @media screen and (max-width:1199px) {
+      font-size: 12px;
+      letter-spaicing: 0.24px;
+    }
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.28px;
     color: getcolor('just-text');
     &:hover,
     &:focus {

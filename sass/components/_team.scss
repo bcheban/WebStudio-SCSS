@@ -1,7 +1,14 @@
+
 .team {
-    background: #f5f4fa;
-    padding: 94px 215px;
+  @media screen  and (max-width:768px){
+    padding: 60px 0;
+}
+    background-color: #f5f4fa;
+    padding: 94px 0;
     &__title {
+      @media screen  and (max-width:768px) { 
+        margin-bottom: 30px;
+      }
       font-weight: 700;
       font-size: 36px;
       line-height: 1.16;
@@ -16,6 +23,13 @@
 
   .team-list {
     @include flex();
+    @media screen and (max-width:1199px) {
+      @include flex($wrap:wrap);
+      gap: 30px;
+    @media screen and (max-width:767px) {
+      @include flex(center, $wrap:wrap);
+    }
+  }
     &__item {
       transition: transform 500ms ease;
       background: getcolor('white-text');
@@ -29,6 +43,18 @@
     }
     
     &__thumb {
+      @media screen and (max-width:1199px){
+        width: 354px;
+        height: 374px;
+    }
+    @media screen and (max-width:767px){
+        width: 450px;
+        height: 460px;
+    }
+    @media screen and (max-width:480px){
+        min-width: 290px;
+        max-width: 450px;
+    }
       width: 270px;
       height: 260px;
       margin-bottom: 30px;
@@ -88,5 +114,3 @@
     }
     
   }
-
-  
