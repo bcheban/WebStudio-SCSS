@@ -16,13 +16,19 @@
 .footer {
     background-color: getcolor(footer-bg-text);
     padding: 60px 0;
-    padding-left: 215px;
-    &__container {
-      @include flex(flex-start, flex-start);
-    }
+    // padding-left: 215px;
   }
   
-  
+  .address {
+    @media screen and (max-width:1199px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+  }
+
   .footer-first {
     width: 231px;
     margin-right: 70px;
@@ -188,7 +194,6 @@
     margin-top: 20px;
     @media screen and (max-width:1199px){
       width: 450px;
-      margin: 0;
   }
   @media screen and (max-width:480px){
       width: 100%;

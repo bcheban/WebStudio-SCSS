@@ -39,25 +39,10 @@ a {
   text-decoration: none;
 }
 
-.container {
-  width: 1600px;
-  margin: 0 auto;
-}
-
-.contant-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .outer-container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-}
-@media screen and (max-width: 786px) {
-  .outer-container {
-    max-width: 768px;
-  }
 }
 @media screen and (max-width: 480px) {
   .outer-container {
@@ -101,9 +86,9 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 32px 0;
+  padding: 24px 0;
 }
 @media screen and (max-width: 1199px) {
   .header {
@@ -146,19 +131,30 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 520px;
+  width: 285px;
+}
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
 }
 
 .logo-link-header {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.19px;
   color: #212121;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.78px;
   animation: change-color 2s linear infinite;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
+  .logo-link-header {
+    font-size: 24px;
+    letter-spacing: 0.72px;
+  }
+}
+@media screen and (max-width: 768px) {
   .logo-link-header {
     font-size: 24px;
     letter-spacing: 0.72px;
@@ -169,18 +165,6 @@ a {
   animation: changecolor 2s linear infinite;
 }
 
-.studio {
-  animation: ChangeColor 2s linear infinite;
-}
-
-@keyframes ChangeColor {
-  0% {
-    color: #2196f3;
-  }
-  100% {
-    color: #212121;
-  }
-}
 @keyframes change-color {
   0% {
     color: #2196f3;
@@ -203,25 +187,20 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 281px;
+  width: 100%;
+}
+.nav-list__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-@media screen and (max-width: 767px) {
-  .nav-list {
-    display: none;
-  }
-}
-.nav-list__link {
   color: #212121;
   position: relative;
 }
 .nav-list__link::after {
   content: "";
   position: absolute;
-  top: 52.5px;
+  top: 38px;
   left: 0;
   width: 0;
   height: 4px;
@@ -237,21 +216,23 @@ a {
 }
 
 .contacts-link {
+  display: flex;
+  gap: 8px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.28px;
   color: #757575;
 }
-@media screen and (max-width: 1199px) {
-  .contacts-link {
-    font-size: 12px;
-    letter-spaicing: 0.24px;
-  }
-}
 .contacts-link:hover, .contacts-link:focus {
   color: #2196F3;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 1199px) {
+  .contacts-link {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
 }
 .contacts-link__svg {
   fill: #757575;
@@ -501,6 +482,7 @@ a {
 }
 
 .team-list {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -533,6 +515,11 @@ a {
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 1199px) {
+  .team-list__item {
+    padding-bottom: 24px;
+  }
+}
 .team-list__item:hover {
   transform: scale(1.1);
 }
@@ -557,6 +544,7 @@ a {
   .team-list__thumb {
     min-width: 290px;
     max-width: 450px;
+    width: 100%;
   }
 }
 .team-list__img {
@@ -650,7 +638,7 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 1170px;
+  width: 100%;
   margin: 0 auto;
 }
 @media screen and (max-width: 1199px) {
@@ -728,14 +716,15 @@ a {
 .footer {
   background-color: #2F303A;
   padding: 60px 0;
-  padding-left: 215px;
 }
-.footer__container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
+
+@media screen and (max-width: 1199px) {
+  .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer-first {
@@ -928,7 +917,6 @@ address {
 @media screen and (max-width: 1199px) {
   .footer-form__input {
     width: 450px;
-    margin: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1025,6 +1013,12 @@ address {
   position: absolute;
   z-index: 12;
 }
+@media screen and (max-width: 768px) {
+  .modal {
+    max-width: 450px;
+    max-height: 609px;
+  }
+}
 .modal__title {
   color: #212121;
   text-align: center;
@@ -1034,6 +1028,11 @@ address {
   letter-spacing: 0.6px;
   margin-bottom: 12px;
 }
+@media screen and (max-width: 1199px) {
+  .modal__title {
+    line-height: 1.5;
+  }
+}
 .modal__accept {
   color: #757575;
   font-size: 14px;
@@ -1042,6 +1041,13 @@ address {
   letter-spacing: 0.42px;
   text-align: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .modal__accept {
+    font-size: 12px;
+    letter-spacing: 0.36;
+    width: 100%;
+  }
 }
 .modal__checkbox {
   cursor: pointer;
@@ -1098,6 +1104,12 @@ address {
   padding: 12px 20px 12px 42px;
   outline: none;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .modal-list__input {
+    width: 370px;
+    height: 40px;
+  }
 }
 .modal-list__input:hover {
   border: 1px solid #2196F3;

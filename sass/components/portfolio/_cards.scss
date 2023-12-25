@@ -1,27 +1,48 @@
-.content {
-    width: 1200px;
-    margin: 94px auto;
-  }
+
   
   .project-list {
+    width: 100%;
     @include flex($wrap: wrap);
+    gap: 30px;
     &__card {
       width: 370px;
-      height: 404px;
-      background: getcolor('white-text');
+      background-color: getcolor('white-text');
+      padding-bottom: 20px;
+      cursor: pointer;
       border: 1px solid #eeeeee;
       overflow: hidden;
-      padding-bottom: 20px;
-      &:nth-child(-n+6) {
-        margin-bottom: 30px;
+      @media screen and (max-width: 1199px) {
+        width: 354px;
+        }
+        @media screen and (max-width: 767px) {
+        padding-bottom: 20px;
+        width: 450px;
+        }
+        @media screen and (max-width: 480px) {
+        min-width: 320px;
+        width: 100%;
+        }
+      &:hover {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
       }
     }
     
     &__thumb {
+      
       width: 370px;
       height: 294px;
       margin-bottom: 20px;
       position: relative;
+      @media screen and (max-width: 1199px) {
+        width: 354px;
+        }
+        @media screen and (max-width: 767px) {
+        width: 450px;
+        }
+        @media screen and (max-width: 480px) {
+        width: 100%;
+        min-width: 290px;
+        }
     }
     &__img {
       width: 100%;

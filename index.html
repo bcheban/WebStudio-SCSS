@@ -22,30 +22,29 @@
   </head>
 
   <body>
-    <div class="container">
-      <header>
-        <div class="header">
+    <div class="outer-container">
+      <header class="header">
+        
           <div class="inner-container">
-            <div class="header__left">
+              <a href="./index.html" class="logo-link-header">
+                <span class="logo-link-header__web">Web</span>Studio</a
+              >
               <nav class="navigation">
-                <a href="./index.html" class="logo-link-header">
-                  <span class="logo-link-header__web">Web</span>Studio</a
-                >
+                
                 <ul class="nav-list">
-                  <li>
+                  <li class="nav-list__item">
                     <a class="nav-list__link" href="./index.html">Студія</a>
                   </li>
-                  <li>
+                  <li class="nav-list__item">
                     <a class="nav-list__link" href="./pages/portfolio.html"
                       >Портфоліо</a
                     >
                   </li>
-                  <li>
+                  <li class="nav-list__item">
                     <a class="nav-list__link" href="#">Контакти</a>
                   </li>
                 </ul>
               </nav>
-            </div>
 
             <div class="header__right">
               <a class="contacts-link" href="mailto:info@devstudio.com">
@@ -61,7 +60,11 @@
                 >+38 096 111 11 11</a
               >
             </div>
-          </div>
+            <!-- <button type="button" class="header__menu-btn" data-open-Menu>
+              <svg class="header-menu__svg">
+                <use href=""></use>
+              </svg>
+            </button> -->
         </div>
       </header>
 
@@ -78,39 +81,40 @@
 
         <section class="features">
           <div class="inner-container">
-          <ul class="features-list">
-            <li class="features-list__item">
-              <h3 class="features-list__subtitle">Увага до деталей</h3>
-              <p class="features-list__paragr">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
-              </p>
-            </li>
+            <ul class="features-list">
+              <li class="features-list__item">
+                <h3 class="features-list__subtitle">Увага до деталей</h3>
+                <p class="features-list__paragr">
+                  Ідейні міркування, і навіть початок повсякденної роботи з
+                  формування позиції.
+                </p>
+              </li>
 
-            <li class="features-list__item">
-              <h3 class="features-list__subtitle">Пунктуальність</h3>
-              <p class="features-list__paragr">
-                Завдання організації, особливо рамки і місце навчання кадрів
-                тягне у себе.
-              </p>
-            </li>
+              <li class="features-list__item">
+                <h3 class="features-list__subtitle">Пунктуальність</h3>
+                <p class="features-list__paragr">
+                  Завдання організації, особливо рамки і місце навчання кадрів
+                  тягне у себе.
+                </p>
+              </li>
 
-            <li class="features-list__item">
-              <h3 class="features-list__subtitle">Планування</h3>
-              <p class="features-list__paragr">
-                Так само консультація з широким активом значною мірою зумовлює.
-              </p>
-            </li>
+              <li class="features-list__item">
+                <h3 class="features-list__subtitle">Планування</h3>
+                <p class="features-list__paragr">
+                  Так само консультація з широким активом значною мірою
+                  зумовлює.
+                </p>
+              </li>
 
-            <li class="features-list__item">
-              <h3 class="features-list__subtitle">Сучасні технології</h3>
-              <p class="features-list__paragr">
-                Значимість цих проблем настільки очевидна, що реалізація
-                планових завдань.
-              </p>
-            </li>
-          </ul>
-        </div>
+              <li class="features-list__item">
+                <h3 class="features-list__subtitle">Сучасні технології</h3>
+                <p class="features-list__paragr">
+                  Значимість цих проблем настільки очевидна, що реалізація
+                  планових завдань.
+                </p>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section class="work">
@@ -351,10 +355,10 @@
               <li class="customers-list__item">
                 <a class="customers-list__link" href="#">
                   <svg class="customers-list__icons" width="106" height="60">
-                    <use
-                      href="./images/icons/symbol-defs.svg#first-icon"
-                    ></use></svg
-                ></a>
+                    <use href="./images/icons/symbol-defs.svg#first-icon"></use>
+                  </svg>
+                  </a
+                >
               </li>
               <li class="customers-list__item">
                 <a class="customers-list__link" href="#">
@@ -402,84 +406,80 @@
 
       <footer class="footer">
         <div class="inner-container">
-          <div class="footer__container">
-            <section class="footer-first">
-              <a class="logo-link" href="./index.html">
-                <span class="logo-link__footer">Web</span
-                ><span class="logo-link__studio">Studio</span>
-              </a>
-              <address>
-                <a href="#" class="address-link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
-                <a class="contact-link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-                <a class="contact-link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
-              </address>
-            </section>
+          <section class="footer-first">
+            <a class="logo-link" href="./index.html">
+              <span class="logo-link__footer">Web</span
+              ><span class="logo-link__studio">Studio</span>
+            </a>
+            <address class="address">
+              <a href="#" class="address-link"
+                >м. Київ, пр-т Лесі Українки, 26</a
+              >
+              <a class="contact-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+              <a class="contact-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </address>
+          </section>
 
-            <section class="footer-second">
-              <h2 class="footer-second__text">приєднуйтесь</h2>
-              <ul class="join-list">
-                <li class="join-list__item">
-                  <a href="#" class="join-list__link">
-                    <svg class="join-list__social">
-                      <use
-                        href="./images/icons/symbol-defs.svg#instagram"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="join-list__item">
-                  <a href="#" class="join-list__link">
-                    <svg class="join-list__social">
-                      <use href="./images/icons/symbol-defs.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="join-list__item">
-                  <a href="#" class="join-list__link">
-                    <svg class="join-list__social">
-                      <use href="./images/icons/symbol-defs.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="join-list__item">
-                  <a href="#" class="join-list__link">
-                    <svg class="join-list__social">
-                      <use href="./images/icons/symbol-defs.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </section>
-
-            <section class="footer-third">
-              <form class="footer-form">
-                <label class="footer-form__label"
-                  >Підпишіться на розсилку
-                  <input
-                    type="email"
-                    placeholder="E-mail"
-                    class="footer-form__input"
-                    required
-                  />
-                </label>
-
-                <button type="submit" class="footer-form__btn">
-                  Підписатися
-                  <svg class="footer-form__subscribe">
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-telegram"
-                    ></use>
+          <section class="footer-second">
+            <h2 class="footer-second__text">приєднуйтесь</h2>
+            <ul class="join-list">
+              <li class="join-list__item">
+                <a href="#" class="join-list__link">
+                  <svg class="join-list__social">
+                    <use href="./images/icons/symbol-defs.svg#instagram"></use>
                   </svg>
-                </button>
-              </form>
-            </section>
-          </div>
+                </a>
+              </li>
+              <li class="join-list__item">
+                <a href="#" class="join-list__link">
+                  <svg class="join-list__social">
+                    <use href="./images/icons/symbol-defs.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-list__item">
+                <a href="#" class="join-list__link">
+                  <svg class="join-list__social">
+                    <use href="./images/icons/symbol-defs.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-list__item">
+                <a href="#" class="join-list__link">
+                  <svg class="join-list__social">
+                    <use href="./images/icons/symbol-defs.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer-third">
+            <form class="footer-form">
+              <label class="footer-form__label"
+                >Підпишіться на розсилку
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="footer-form__input"
+                  required
+                />
+              </label>
+
+              <button type="submit" class="footer-form__btn">
+                Підписатися
+                <svg class="footer-form__subscribe">
+                  <use
+                    href="./images/icons/symbol-defs.svg#icon-telegram"
+                  ></use>
+                </svg>
+              </button>
+            </form>
+          </section>
         </div>
       </footer>
 

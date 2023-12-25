@@ -42,7 +42,14 @@
     padding: 40px;
     position: absolute;
     z-index: 12;
+    @media screen and (max-width:768px){
+      max-width: 450px;
+      max-height: 609px;
+   }
     &__title {
+      @media screen and (max-width:1199px){
+        line-height: 1.5;
+   }
       color: getcolor('title-text');
       text-align: center;
       font-size: 20px;
@@ -53,6 +60,11 @@
     }
     
       &__accept {
+        @media screen and (max-width:1199px){
+          font-size: 12px;
+          letter-spacing: 0.36;
+          width: 100%;
+     }
         color: getcolor('just-text');
         font-size: 14px;
         font-weight: 400;
@@ -109,6 +121,10 @@
         padding: 12px 20px 12px 42px;
         outline: none;
         cursor: pointer;
+        @media screen and (max-width:768px){
+          width: 370px;
+          height: 40px;
+       }
         &:hover{
           border: 1px solid getcolor('hover-text'); 
         }
